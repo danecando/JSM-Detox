@@ -1,10 +1,21 @@
 # React Native E2E Testing with Detox
 
+Learn how to setup your local or CI environment to run E2E tests on iOS & Android emulators with Detox. Write E2E tests for a demo application covering best practices and gotchas along the way.
+
+## Table of contents
+
+- [Setup](##setup)
+- [Running](##running)
+- [Branches](##branches)
+- [App Overview](##app-overview)
+- [E2E Test Cases](##e2e-test-cases)
+- [Resources](##resources)
+
 ## Setup
 
 ```bash
-git clone https://github.com/danecando/JSM-Detox.git
-cd JSM-Detox
+git clone https://github.com/danecando/JSM-Detox-Testing.git
+cd JSMarathon
 yarn
 ```
 
@@ -33,7 +44,7 @@ yarn ios
 - `main` - Base demo app without detox or e2e tests
 - `tests` - Demo app with working e2e tests
 
-## App overview
+## App Overview
 
 We love pizza at This Dot! The demo is an app for our fictional pizza restaurant.
 
@@ -68,3 +79,8 @@ We want to write e2e tests to cover these user flows
 - [ ] User can navigate to orders to see previous orders
 - [ ] User can pick an item from the menu, select a size and options, and place an order
 - [ ] User can create their own pizza and order it
+
+## Resources
+
+- [https://github.com/wix/Detox](https://github.com/wix/Detox)
+- [https://medium.com/wix-engineering/detox-writing-stable-test-suites-372c9d537184](https://medium.com/wix-engineering/detox-writing-stable-test-suites-372c9d537184)
