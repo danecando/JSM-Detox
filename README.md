@@ -4,12 +4,12 @@ Learn how to setup your local or CI environment to run E2E tests on iOS & Androi
 
 ## Table of contents
 
-- [Setup](##setup)
-- [Running](##running)
-- [Branches](##branches)
-- [App Overview](##app-overview)
-- [E2E Test Cases](##e2e-test-cases)
-- [Resources](##resources)
+- [Setup](#setup)
+- [Running](#running)
+- [Branches](#branches)
+- [App Overview](#app-overview)
+- [E2E Test Cases](#e2e-test-cases)
+- [Resources](#resources)
 
 ## Setup
 
