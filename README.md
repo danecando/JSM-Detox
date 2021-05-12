@@ -3,8 +3,8 @@
 ## Setup
 
 ```bash
-git clone https://github.com/danecando/JSMarathon.git
-cd JSMarathon
+git clone https://github.com/danecando/JSM-Detox.git
+cd JSM-Detox
 yarn
 ```
 
