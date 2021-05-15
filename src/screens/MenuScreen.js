@@ -11,7 +11,7 @@ export const MenuScreen = ({ navigation }) => {
     navigation.navigate('OptionScreen', { item });
 
   return (
-    <SafeAreaView>
+    <SafeAreaView testID="menu-screen">
       <ScrollView>
         <BannerImage url="https://pbs.twimg.com/profile_banners/1093412383/1619207896/1500x500" />
         <Button
