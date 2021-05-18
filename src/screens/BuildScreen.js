@@ -38,12 +38,13 @@ export const BuildScreen = ({ navigation }) => {
       <BannerImage url="https://pbs.twimg.com/profile_banners/1093412383/1619207896/1500x500" />
       <View style={styles.section}>
         <Text style={styles.heading}>Available toppings:</Text>
-        <View style={styles.row}>
+        <View style={styles.row} testID="available-toppings">
           {availableToppings.map((topping, idx) => (
             <TouchableOpacity
               key={`${topping}_${idx}`}
               style={styles.pillButton}
-              onPress={() => addTopping(topping)}>
+              onPress={() => addTopping(topping)}
+              testID="available-topping">
               <Pill text={topping} />
             </TouchableOpacity>
           ))}
@@ -51,12 +52,13 @@ export const BuildScreen = ({ navigation }) => {
       </View>
       <View style={styles.section}>
         <Text style={styles.heading}>Selected Toppings</Text>
-        <View style={styles.row}>
+        <View style={styles.row} testID="selected-toppings">
           {selectedToppings.map((topping, idx) => (
             <TouchableOpacity
               key={`${topping}_${idx}`}
               style={styles.pillButton}
-              onPress={() => removeTopping(topping)}>
+              onPress={() => removeTopping(topping)}
+              testID="selected-topping">
               <Pill text={topping} />
             </TouchableOpacity>
           ))}
@@ -69,12 +71,15 @@ export const BuildScreen = ({ navigation }) => {
         <Text style={StyleSheet.flatten([styles.heading, styles.bigText])}>
           Total:{' '}
         </Text>
-        <Text style={styles.bigText}>${price}</Text>
+        <Text style={styles.bigText} testID="total">
+          ${price}
+        </Text>
       </View>
       <View style={styles.section}>
         <Button
           buttonStyles={styles.orderButton}
           text="Submit Order"
+          testID="submit-order"
           onPress={() => {
             dispatch({
               type: 'add',

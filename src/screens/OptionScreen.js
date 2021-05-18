@@ -31,12 +31,15 @@ export const OptionScreen = ({ navigation, route }) => {
           <Text style={StyleSheet.flatten([styles.heading, styles.bigText])}>
             Total:{' '}
           </Text>
-          <Text style={styles.bigText}>${price}</Text>
+          <Text testID="total" style={styles.bigText}>
+            ${price}
+          </Text>
         </View>
         <View style={styles.section}>
           <Button
             buttonStyles={styles.orderButton}
             text="Submit Order"
+            testID="order-button"
             onPress={() => {
               dispatch({ type: 'add', item, size, price: `$${price}` });
               navigation.navigate('Orders');

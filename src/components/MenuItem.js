@@ -2,8 +2,8 @@ import React from 'react';
 import { Image, Text, View, StyleSheet } from 'react-native';
 import { Button } from './Button';
 
-export const MenuItem = ({ item, handlePress, children }) => (
-  <View style={styles.container}>
+export const MenuItem = ({ item, handlePress, children, testID }) => (
+  <View style={styles.container} testID={testID}>
     <View style={styles.row}>
       <View style={styles.imageContainer}>
         <Image style={styles.image} source={{ uri: item.image }} />

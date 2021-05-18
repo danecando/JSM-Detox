@@ -12,20 +12,22 @@ export const OrdersScreen = () => {
     <SafeAreaView style={styles.screen}>
       <Text style={styles.header}>Orders</Text>
       <ScrollView>
-        {orders.map(order => (
-          <View key={order.id} style={styles.order}>
-            <View>
-              <Text style={styles.dateText}>Ordered: {order.date}</Text>
-            </View>
-            <MenuItem item={order.item}>
-              <View style={StyleSheet.flatten([styles.row, styles.space])}>
-                <Text style={styles.orderInfo}>Size: {order.size}</Text>
-                <Text style={styles.orderInfo}>Total: {order.total}</Text>
-                <Text style={styles.orderInfo}>Status: {order.status}</Text>
+        <View testID="orders-list">
+          {orders.map(order => (
+            <View key={order.id} style={styles.order} testID="order-item">
+              <View>
+                <Text style={styles.dateText}>Ordered: {order.date}</Text>
               </View>
-            </MenuItem>
-          </View>
-        ))}
+              <MenuItem item={order.item}>
+                <View style={StyleSheet.flatten([styles.row, styles.space])}>
+                  <Text style={styles.orderInfo}>Size: {order.size}</Text>
+                  <Text style={styles.orderInfo}>Total: {order.total}</Text>
+                  <Text style={styles.orderInfo}>Status: {order.status}</Text>
+                </View>
+              </MenuItem>
+            </View>
+          ))}
+        </View>
       </ScrollView>
     </SafeAreaView>
   );

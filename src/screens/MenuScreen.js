@@ -20,7 +20,12 @@ export const MenuScreen = ({ navigation }) => {
           onPress={() => navigation.navigate('Build')}
         />
         {menuData.map(item => (
-          <MenuItem key={item.id} item={item} handlePress={handlePress(item)} />
+          <MenuItem
+            key={item.id}
+            testID={item.id}
+            item={item}
+            handlePress={handlePress(item)}
+          />
         ))}
       </ScrollView>
     </SafeAreaView>
