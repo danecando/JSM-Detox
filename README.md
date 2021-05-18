@@ -44,6 +44,7 @@ yarn ios
 ## Branches
 
 - `main` - Base demo app without detox or e2e tests
+- `setup` - Demo app with detox setup and configured for iOS + Android with initial working test
 - `tests` - Demo app with working e2e tests
 
 ## App Overview
